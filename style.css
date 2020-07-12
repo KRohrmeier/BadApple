@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;}
+
+.story {
+  height: 100vh;
+  max-width: 50rem;
+  padding: 0 3rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+.story.opening {
+  background: center no-repeat url(https://cdn.thecrazytourist.com/wp-content/uploads/2018/10/ccimage-shutterstock_444112507.jpg);
+}
+
+h1 {
+  font-family: fantasy;
+  font-size: 5rem;
+  text-align: center;
+  border: 2mm ridge #640005;
+  padding: 1.7rem 2.7rem;
+  max-width: fit-content;
+  margin: 0 auto;
+  background: radial-gradient(#f74747, #062203);
+  transition: ease-in-out 0.5s;
+}
+
+h1:hover, h1:focus {
+  border: 0.5rem solid #438a24;
+}
+
+h2 {
+  font-family: fantasy;
+  font-size: 2rem;
+  text-align: center;
+  /* padding: 1.7rem 2.7rem; */
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+p {
+  text-align: left;
+  padding: 0.5rem 1rem;
+}
+
+a {
+ text-decoration: none;
+ color: #081808;
+}
+
+.small-link {
+  padding: 0.3rem;
+}
+
+a:hover.large-link, a:focus.large-link{
+  color: #438a24;
+  border: 0.7rem solid #438a24;
+}
+
+a:hover.small-link, a:focus.small-link{
+  color: #438a24;
+  border: 0.2rem solid #438a24;
+}
+
+.paragraph-container {
+  margin-top: 2rem;
+  padding: 1.2rem;
+}
+
+.half-white {
+  background: rgba(255, 255, 255, 0.65);
+}
