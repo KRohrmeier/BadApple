@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="inkstyle.css" />
+    <title>Bad Apple</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div id="bg">
+          <!-- src="https://wallpapertag.com/wallpaper/full/a/d/c/49949-steampunk-background-5000x2801-mobile.jpg" -->
+          <img
+            class="a"
+            src="https://wallpapertag.com/wallpaper/full/7/e/8/831464-steampunk-backgrounds-1920x1080-picture.jpg"
+          />
+        </div>
+        <video data-depth="50" height="540" id="myVideo" width="620">
+          <source
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/ink4.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <img
+          class="b"
+          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/clockwork.png"
+        />
+        <div class="wrap_inner">
+          <div class="container_inner">
+            <h1>The ink spilled...</h1>
+            <img
+              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/trill.png"
+            />
+            <p>
+              ...leaving a strange-looking plot on the parchment.
+            </p>
+            <a href="chapter1-4.html">It looks like</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button">Open the ink bottle.</div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      var vid = document.getElementById('myVideo');
+
+      function playVid() {
+        vid.play();
+      }
+
+      $('.button').click(function () {
+        $(this).fadeOut(500);
+
+        setTimeout(function () {
+          playVid();
+        }, 800);
+
+        setTimeout(function () {
+          $('h1,.container_inner img,a').css('opacity', '1');
+          $('p').css('opacity', '.6');
+        }, 1700);
+      });
+    </script>
+  </body>
+</html>

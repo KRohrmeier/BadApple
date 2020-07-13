@@ -2,29 +2,79 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Bad Apple - Chapter 1</title>
-    <meta name="description" content="An interactive fiction retelling of Snow White">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="An interactive fiction retelling of Snow White"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&text=The%20Queen&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
     <![endif]-->
-    <div class="story opening ch1-2">
-    <h2>The Queen</h2>
+    <div class="story ch1-Queen">
+      <h2>The Queen</h2>
       <div class="half-white paragraph-container">
-        <p>A.</p>
-        <p></p>
-        <p></p>
+        <div class="p">
+          Queen
+          <button
+            id="nameButton"
+            onclick="cycleNamesButton(this, ['Margaret', 'Penelope', 'Jusche', 'Omnu'])"
+          >
+            Omnu
+          </button>
+          had no family. All had been killed in wars or childbirth or by murder.
+        </div>
         <a href="chapter1-3.html" class="small-link">continue</a>
-        
       </div>
     </div>
-    <script src="" async defer></script>
+    <script>
+      let i = 0;
+      function cycleNamesButton(element, names) {
+        if (i === names.length) {
+          i = 0;
+        }
+        element.value = names[i];
+        element.innerHTML = names[i];
+        i++;
+      }
+
+      // function cycleNames(names) {
+      //   if (i === names.length) {
+      //     i = 0;
+      //   }
+
+      //   // create an replacement element node
+      //   var nameSpan = document.createElement('span');
+      //   nameSpan.id = 'nameSpan';
+      //   nameSpan.className = 'cycle-name';
+      //   var nameSpan_content = document.createTextNode(names[i]);
+      //   nameSpan.appendChild(nameSpan_content);
+
+      //   // create references to the existing node to be replaced & parent
+      //   var origSpan = document.getElementById('nameSpan');
+      //   var parentDiv = document.getElementById('nameParentSpan');
+
+      //   // Replace existing span with the new span element
+      //   parentDiv.replaceChild(nameSpan, origSpan);
+
+      //   i++;
+      // }
+    </script>
   </body>
 </html>

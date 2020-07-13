@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  padding: 0;}
+  padding: 0;
+  background: linear-gradient(45deg, #040203, #3a2309);
+}
 
 .story {
   height: 100vh;
@@ -9,55 +11,83 @@ body {
   margin: 2rem auto;
   text-align: center;
 }
-.story.opening {
-  background: center no-repeat url(https://cdn.thecrazytourist.com/wp-content/uploads/2018/10/ccimage-shutterstock_444112507.jpg);
+.flex-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+/* .story.opening {
+  background-image: url('bad-apple-title.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+.ch1-1 {
+  background: url(https://wallpapertag.com/wallpaper/full/e/5/0/564783-most-popular-steampunk-desktop-wallpaper-1920x1080-phone.jpg);
+  /* background-position: bottom 30px right 0px; */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ch1-Queen {
+  background: center no-repeat
+    url(https://wallpapertag.com/wallpaper/full/a/6/0/336803-large-steampunk-background-1920x1080.jpg);
 }
 
 h1 {
   font-family: fantasy;
   font-size: 5rem;
   text-align: center;
-  border: 2mm ridge #640005;
+  border: 0.5rem ridge #251e09;
   padding: 1.7rem 2.7rem;
   max-width: fit-content;
   margin: 0 auto;
-  background: radial-gradient(#f74747, #062203);
-  transition: ease-in-out 0.5s;
+  background: linear-gradient(75deg, #443f2d, #d8a91d);
+  transition: ease-in-out 0.25s;
 }
 
-h1:hover, h1:focus {
-  border: 0.5rem solid #438a24;
+h1:hover,
+h1:focus {
+  border: 0.5rem ridge #721515;
+  background: linear-gradient(75deg, #d8a91d, #443f2d);
 }
 
 h2 {
-  font-family: fantasy;
+  font-family: 'Sacramento', cursive;
   font-size: 2rem;
   text-align: center;
-  /* padding: 1.7rem 2.7rem; */
+  padding: 1.5rem 2.7rem;
   max-width: fit-content;
   margin: 0 auto;
 }
 
-p {
+p,
+.p {
   text-align: left;
   padding: 0.5rem 1rem;
 }
 
 a {
- text-decoration: none;
- color: #081808;
+  text-decoration: none;
+  color: #081808;
+}
+
+#nameButton {
+  min-width: 5rem;
 }
 
 .small-link {
   padding: 0.3rem;
 }
 
-a:hover.large-link, a:focus.large-link{
-  color: #438a24;
-  border: 0.7rem solid #438a24;
+a:hover.large-link,
+a:focus.large-link {
+  color: #721515;
+  border: 0.7rem solid #721515;
 }
 
-a:hover.small-link, a:focus.small-link{
+a:hover.small-link,
+a:focus.small-link {
   color: #438a24;
   border: 0.2rem solid #438a24;
 }
@@ -69,4 +99,16 @@ a:hover.small-link, a:focus.small-link{
 
 .half-white {
   background: rgba(255, 255, 255, 0.65);
+}
+
+.fade {
+  transition: ease-in-out 0.5s;
+}
+.prompt-changeable {
+  text-decoration: #640005 underline;
+  color: #640005;
+}
+
+.not-displayed {
+  display: none;
 }

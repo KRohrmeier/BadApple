@@ -2,35 +2,104 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Bad Apple - Chapter 1</title>
-    <meta name="description" content="An interactive fiction retelling of Snow White">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <meta
+      name="description"
+      content="An interactive fiction retelling of Snow White"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&text=Chapter%201&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
     <![endif]-->
-    <div class="story opening ch1-1">
-    <h2>Chapter 1</h2>
+    <div class="story ch1-1">
+      <h2>Chapter 1</h2>
       <div class="half-white paragraph-container">
-        <p>A long time ago in a land far, far away the young Queen who ruled the land fell ill.</p>
-        <p>While her counselors bickered amongst themselves jockeying for power, more concerned 
-          about succession and politics than for their Queen's health, 
-          counselors being generally of such a type likely to forget the actual person 
-          behind title and power, it was the common folk who worried for their Queen 
-          and prayed for her good health.</p>
-        <p>The Queen, though still young, had already endeared herself to 
-          them. It was in the hearts and good will of her people that she had the most support, 
-          the most love. This was the source of her power.</p>
+        <p>
+          A long time ago in a land far, far away the young Queen who ruled the
+          land fell ill.
+        </p>
+        <p>
+          Well, you know how this goes. The Queen falls ill, the
+          <span
+            class="prompt-changeable"
+            onmouseover="showInfo('counselors')"
+            onmouseout="clearInfo()"
+            >counselors</span
+          >
+          bicker about succession while the
+          <span
+            class="prompt-changeable"
+            onmouseover="showInfo('nobels')"
+            onmouseout="clearInfo()"
+            >nobels</span
+          >
+          orchestrate power grabs, and only
+          <span
+            class="prompt-changeable"
+            onmouseover="showInfo('commoners')"
+            onmouseout="clearInfo()"
+            >the common folk</span
+          >
+          worry about their Queen and pray for her returned good health.
+        </p>
+        <p>
+          The Queen, though still young, had already endeared herself to the
+          common folk. It was in the hearts and good will of her people that she
+          had the most support, the most love. This was the source of her power.
+        </p>
+        <div id="infoDiv" class="not-displayed"></div>
         <a href="chapter1-2.html" class="small-link">continue</a>
-        
       </div>
     </div>
-    <script src="" async defer></script>
+    <script>
+      function showInfo(contentType) {
+        function getContent(contentType) {
+          switch (contentType) {
+            case 'counselors':
+              console.log('Counselors');
+              return '(Counselors being generally of such a type likely to forget the actual person behind title and crown.)';
+            case 'nobels':
+              console.log('Nobels');
+              return '(Nobels were in an unenviable spot: everything to lose and every way to lose it. Unless they become royalty. So they did everything they could to become royalty.)';
+            case 'commoners':
+              console.log('commoners');
+              return "(You know commoners were overworked and poorly treated by the upper classes that they often rebelled against the upper class don't you? Happened so frequently the nobility was terrified of them which they covered up with anger and animosity. The perenial need to feel superior in the face of injustice you yourself perpetuate. Yup.)";
+            default:
+              console.log(`Sorry, we are out of ${contentType}.`);
+          }
+        }
+
+        const infoDiv = document.getElementById('infoDiv');
+        infoDiv.className = 'p';
+        const infoP = document.createElement('p');
+        infoP.id = 'infoP';
+        var infoP_content = document.createTextNode(getContent(contentType));
+        infoDiv.appendChild(infoP_content);
+      }
+
+      function clearInfo() {
+        const infoDiv = document.getElementById('infoDiv');
+        infoDiv.className = 'not-displayed';
+        while (infoDiv.firstChild) {
+          infoDiv.removeChild(infoDiv.firstChild);
+        }
+      }
+    </script>
   </body>
 </html>
