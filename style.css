@@ -28,10 +28,9 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+/* url(https://wallpapertag.com/wallpaper/full/a/6/0/336803-large-steampunk-background-1920x1080.jpg); */
 .ch1-Queen {
-  background: center no-repeat
-    url(https://wallpapertag.com/wallpaper/full/a/6/0/336803-large-steampunk-background-1920x1080.jpg);
+  background: center no-repeat url(steampunk-queen-colorized.png);
 }
 
 h1 {
